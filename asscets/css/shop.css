@@ -1,0 +1,77 @@
+/* إعدادات الهيدر */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.logo img {
+    max-width: 120px; /* حجم الشعار */
+}
+
+.my_card {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.my_card .shopping-icon {
+    font-size: 24px; /* حجم أيقونة Font Awesome */
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.my_card:hover .shopping-icon {
+    transform: scale(1.1); /* تكبير الأيقونة عند التمرير */
+}
+
+.my_card::after {
+    content: "0"; /* عدد العناصر في العربة */
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.view_product_btn{
+    background-color: #4AA3DF;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    width: 90%;
+    text-align: center;
+    padding: 3px 15px;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+/* btns filter */
+.fliters_btns{
+    display: flex;
+    justify-content: center;
+
+}
+.btn_filter{
+    background-color: #e7e7e7;
+    margin: 10px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.active_btn_filter{
+    background-color: #4AA3DF;
+    color: white;
+}

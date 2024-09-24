@@ -31,7 +31,7 @@
                 <a href="#about" class="link">عنا</a>
                 <a href="#services" class="link">خدماتنا</a>
                 <a href="#comment" class="link">التعليقات</a>
-                <a href="#ecommerce" class="link">متجرنا</a>
+                <a href="pages/shop.php" class="link">متجرنا</a>
                 <a href="#" class="link">تواصل معنا</a>
                 <!-- close -->
                 <div class="close_navbar_icon">
@@ -42,7 +42,7 @@
         </nav>
 
         <div class="logo animate__animated animate__zoomInRight">
-            <img src="asscets/image/logo.png" alt="logo">
+            <img src="asscets/image/logo.svg" alt="logo">
         </div>
     </header>
     <!-- section home -->
@@ -882,7 +882,7 @@
                     </div>
                 </div>
                 <div class="profile">
-                    <img src="asscets/image/profiles/perfil_1.png" alt="" class="profile_img">
+                    <img src="profiles/profile_2.png" alt="" class="profile_img">
                 </div>
                 <p class="description_profile">نا انوار اقدم خدمة انشاء مواقع
                     وتصميم ايضا</p>
@@ -901,7 +901,7 @@
                     </div>
                 </div>
                 <div class="profile">
-                    <img src="asscets/image/profiles/perfil_1.png" alt="" class="profile_img">
+                    <img src="profiles/perfil_1.png" alt="" class="profile_img">
                 </div>
                 <p class="description_profile">نا انوار اقدم خدمة انشاء مواقع
                     وتصميم ايضا</p>
@@ -920,7 +920,7 @@
                     </div>
                 </div>
                 <div class="profile">
-                    <img src="asscets/image/profiles/perfil_1.png" alt="" class="profile_img">
+                    <img src="profiles/perfil_1.png" alt="" class="profile_img">
                 </div>
                 <p class="description_profile">نا انوار اقدم خدمة انشاء مواقع
                     وتصميم ايضا</p>
@@ -1090,128 +1090,37 @@
             <div class="shape shape_right"></div>
         </div>
         <div class="cards_ecommerce">
-            <a href="" class="link_card">
-                <div class="card_ecommerce">
-                    <div class="img_prudact">
-                        <img src="asscets/image/prudacts_img/prudact (1).JPG" alt="">
+        <?php
+
+include('config.php');
+$ruslte = mysqli_query($con, "SELECT * FROM prod");
+while ($row = mysqli_fetch_array($ruslte)) {
+    echo "
+
+ <a href='pages/shop.php' class='link_card'>
+                <div class='card_ecommerce' data-category='$row[category]'>
+                    <div class='img_prudact'>
+                        <img src='pages/$row[img]' alt=''>
                     </div>
-                    <span class="new">جديد</span>
-                    <div class="body_card_ecommerce">
-                        <h3 class="name_prudact">TWS x15 pro</h3>
-                        <div class="content_prudact">
-                            <span class="prix">200 MAD</span>
-                            <span class="khasem">%خصم 45</span>
+                    <span class='new'>جديد</span>
+                    <div class='body_card_ecommerce'>
+                        <h3 class='name_prudact'>$row[name]</h3>
+                        <div class='content_prudact'>
+                            <span class='prix'>$row[price] MAD</span>
+                            <span class='khasem'>$row[khasem]خصم</span>
                         </div>
                     </div>
                 </div>
             </a>
-            <a href="" class="link_card">
-                <div class="card_ecommerce">
-                    <div class="img_prudact">
-                        <img src="asscets/image/prudacts_img/prudact (1).JPG" alt="">
-                    </div>
-                    <span class="new">جديد</span>
-                    <div class="body_card_ecommerce">
-                        <h3 class="name_prudact">TWS x15 pro</h3>
-                        <div class="content_prudact">
-                            <span class="prix">200 MAD</span>
-                            <span class="khasem">%خصم 45</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="link_card">
-                <div class="card_ecommerce">
-                    <div class="img_prudact">
-                        <img src="asscets/image/prudacts_img/prudact (1).JPG" alt="">
-                    </div>
-                    <span class="new">جديد</span>
-                    <div class="body_card_ecommerce">
-                        <h3 class="name_prudact">TWS x15 pro</h3>
-                        <div class="content_prudact">
-                            <span class="prix">200 MAD</span>
-                            <span class="khasem">%خصم 45</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="link_card">
-                <div class="card_ecommerce">
-                    <div class="img_prudact">
-                        <img src="asscets/image/prudacts_img/prudact (1).JPG" alt="">
-                    </div>
-                    <span class="new">جديد</span>
-                    <div class="body_card_ecommerce">
-                        <h3 class="name_prudact">TWS x15 pro</h3>
-                        <div class="content_prudact">
-                            <span class="prix">200 MAD</span>
-                            <span class="khasem">%خصم 45</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="link_card">
-                <div class="card_ecommerce">
-                    <div class="img_prudact">
-                        <img src="asscets/image/prudacts_img/prudact (1).JPG" alt="">
-                    </div>
-                    <span class="new">جديد</span>
-                    <div class="body_card_ecommerce">
-                        <h3 class="name_prudact">TWS x15 pro</h3>
-                        <div class="content_prudact">
-                            <span class="prix">200 MAD</span>
-                            <span class="khasem">%خصم 45</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="link_card">
-                <div class="card_ecommerce">
-                    <div class="img_prudact">
-                        <img src="asscets/image/prudacts_img/prudact (1).JPG" alt="">
-                    </div>
-                    <span class="new">جديد</span>
-                    <div class="body_card_ecommerce">
-                        <h3 class="name_prudact">TWS x15 pro</h3>
-                        <div class="content_prudact">
-                            <span class="prix">200 MAD</span>
-                            <span class="khasem">%خصم 45</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="link_card">
-                <div class="card_ecommerce">
-                    <div class="img_prudact">
-                        <img src="asscets/image/prudacts_img/prudact (1).JPG" alt="">
-                    </div>
-                    <span class="new">جديد</span>
-                    <div class="body_card_ecommerce">
-                        <h3 class="name_prudact">TWS x15 pro</h3>
-                        <div class="content_prudact">
-                            <span class="prix">200 MAD</span>
-                            <span class="khasem">%خصم 45</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="link_card">
-                <div class="card_ecommerce">
-                    <div class="img_prudact">
-                        <img src="asscets/image/prudacts_img/prudact (1).JPG" alt="">
-                    </div>
-                    <span class="new">جديد</span>
-                    <div class="body_card_ecommerce">
-                        <h3 class="name_prudact">TWS x15 pro</h3>
-                        <div class="content_prudact">
-                            <span class="prix">200 MAD</span>
-                            <span class="khasem">%خصم 45</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
+
+";
+}
+
+
+
+?>
         </div>
-        <a href="#" class="btn big_btn"> المزيد</a>
+        <a href="pages/shop.php" class="btn big_btn"> المزيد</a>
      </section>
 
 
