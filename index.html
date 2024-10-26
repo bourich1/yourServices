@@ -1090,35 +1090,59 @@
             <div class="shape shape_right"></div>
         </div>
         <div class="cards_ecommerce">
-        <?php
-
-include('config.php');
-$ruslte = mysqli_query($con, "SELECT * FROM prod");
-while ($row = mysqli_fetch_array($ruslte)) {
-    echo "
+       
 
  <a href='pages/shop.php' class='link_card'>
                 <div class='card_ecommerce' data-category='$row[category]'>
                     <div class='img_prudact'>
-                        <img src='pages/$row[img]' alt=''>
+                        <img src='asscets/image/prudact/prudact (1).JPG' alt=''>
                     </div>
                     <span class='new'>جديد</span>
                     <div class='body_card_ecommerce'>
-                        <h3 class='name_prudact'>$row[name]</h3>
+                        <h3 class='name_prudact'>tws pro 3</h3>
                         <div class='content_prudact'>
-                            <span class='prix'>$row[price] MAD</span>
-                            <span class='khasem'>$row[khasem]خصم</span>
+                            <span class='prix'>50 MAD</span>
+                            <span class='khasem'>10% خصم</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href='pages/shop.php' class='link_card'>
+                <div class='card_ecommerce' data-category='$row[category]'>
+                    <div class='img_prudact'>
+                        <img src='asscets/image/prudact/prudact (2).JPG' alt=''>
+                    </div>
+                    <span class='new'>جديد</span>
+                    <div class='body_card_ecommerce'>
+                        <h3 class='name_prudact'>tws pro 3</h3>
+                        <div class='content_prudact'>
+                            <span class='prix'>50 MAD</span>
+                            <span class='khasem'>10% خصم</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href='pages/shop.php' class='link_card'>
+                <div class='card_ecommerce' data-category='$row[category]'>
+                    <div class='img_prudact'>
+                        <img src='asscets/image/prudact/prudact (2).WEBP' alt=''>
+                    </div>
+                    <span class='new'>جديد</span>
+                    <div class='body_card_ecommerce'>
+                        <h3 class='name_prudact'>tws pro 3</h3>
+                        <div class='content_prudact'>
+                            <span class='prix'>50 MAD</span>
+                            <span class='khasem'>10% خصم</span>
                         </div>
                     </div>
                 </div>
             </a>
 
-";
-}
 
 
 
-?>
+
+
         </div>
         <a href="pages/shop.php" class="btn big_btn"> المزيد</a>
      </section>
